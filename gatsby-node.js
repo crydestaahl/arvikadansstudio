@@ -5,11 +5,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve('./src/templates/blog-post.js')
+  // Define a template for larare post
+  const lararePostPath = path.resolve('./src/templates/larare-post.js')
 
   const result = await graphql(
     `
       {
         allContentfulBlogPost {
+          nodes {
+            title
+            slug
+          }
+        }
+        allContentfulLarare {
           nodes {
             title
             slug
@@ -29,6 +37,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allContentfulBlogPost.nodes
 
+  const lararePosts = result.data.allContentfulLarare.nodes
+
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
   // `context` is available in the template as a prop and as a variable in GraphQL
@@ -42,6 +52,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       createPage({
         path: `/blog/${post.slug}/`,
         component: blogPost,
+        context: {
+          slug: post.slug,
+          previousPostSlug,
+          nextPostSlug,
+        },
+      })
+    })
+  }
+
+  // Create posts for larare pages
+  // But only if there's at least one larare post found in Contentful
+  // `context` is available in the template as a prop and as a variable in GraphQL
+
+  if (lararePosts.length > 0) {
+    lararePosts.forEach((post, index) => {
+      const previousPostSlug = index === 0 ? null : lararePosts[index - 1].slug
+      const nextPostSlug =
+        index === lararePosts.length - 1 ? null : lararePosts[index + 1].slug
+
+      createPage({
+        path: `/varalarare/${post.slug}/`,
+        component: lararePostPath,
         context: {
           slug: post.slug,
           previousPostSlug,

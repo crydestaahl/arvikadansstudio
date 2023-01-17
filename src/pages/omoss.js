@@ -10,11 +10,11 @@ import ArticlePreview from '../components/article-preview'
 class BlogIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-
+    console.log(posts)
     return (
       <Layout location={this.props.location}>
-        <Seo title="Blog" />
-        <Hero title="Blog" />
+        <Seo title="Om oss" />
+        <Hero title="Om oss" />
         <ArticlePreview posts={posts} />
       </Layout>
     )

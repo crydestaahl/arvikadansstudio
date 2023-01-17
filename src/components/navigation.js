@@ -5,19 +5,33 @@ import * as styles from './navigation.module.css'
 
 const Navigation = () => (
   <nav role="navigation" className={styles.container} aria-label="Main">
-    <Link to="/" className={styles.logoLink}>
-      <span className={styles.logo} />
-      <span className={styles.navigationItem}>Gatsby Starter Contentful</span>
+    <Link to="/" className={styles.logoLink}>     
+      <span className={styles.navigationItem}>Arvika Dansstudio</span>
     </Link>
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
         <Link to="/" activeClassName="active">
-          Home
+          Hem
         </Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/blog/" activeClassName="active">
-          Blog
+        <Link to="/omoss/" activeClassName="active">
+          Om oss
+        </Link>
+      </li>
+      <li className={styles.navigationItem}>
+        <Link to="/dansstilar/" activeClassName="active">
+          Danskurser & klasser
+        </Link>
+      </li>
+      <li className={styles.navigationItem}>
+        <Link to="/varalarare/" activeClassName="active">
+          Våra lärare
+        </Link>
+      </li>
+      <li className={styles.navigationItem}>
+        <Link to="/dansstilar/" activeClassName="active">
+          Dansstilar
         </Link>
       </li>
     </ul>

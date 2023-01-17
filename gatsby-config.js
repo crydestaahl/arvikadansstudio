@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "Arvika Dansstudio",
+    description: "Träna dans hos oss",
   },
   plugins: [
     "gatsby-transformer-sharp",

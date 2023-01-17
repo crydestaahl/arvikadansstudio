@@ -25,6 +25,7 @@
   width: 85%;
   padding: var(--space-2xl) var(--size-gutter) 0;
   position: absolute;
+  background-color: #fff;
 }
 
 .title {
