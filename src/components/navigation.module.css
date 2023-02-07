@@ -1,3 +1,82 @@
+.menuBtns {
+  display: none;
+}
+
+.left {
+  
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #fff; 
+  color: #333;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 2s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlayContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin: 0 auto; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  list-style: none;
+  padding: 4px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #333;
+  display: block; 
+  transition: 0.3s; 
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  font-weight: bold;
+}
+
+/* Position the close button (top right corner) */
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  
+  .menuBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  .overlay {
+    display: flex;
+  }
+
+  .active {
+    display: flex;
+  }
+  .notActive {
+    display: none !important;
+  }
+}
+
+
+/* Ordernay Nav styler  */
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -43,6 +122,10 @@
 
 
 @media (max-width: 767px) {
+  .hide {
+    display: none;
+  }
+
   .logoLink > span:last-child {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -53,6 +136,23 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+
+  .menuBtns {
+    display: flex;
+    flex-direction: row;    
+  }
+
+  .left {
+    font-weight: bold;
+    width: 40%;
+  }
+
+  .right {
+    width: 40%;
+    position: relative;
+    top: 10px;
+    right: -255px;
   }
 }
 

@@ -9,7 +9,7 @@ const FirstPageContent = ({ content }) => (
       {content && (
         <body className={styles.content}>{renderRichText(content)}</body>
       )}
-      <button class="button-52" role="button">Boka en kurs!</button>
+      <button className="button-52" role="button">Boka en kurs!</button>
     </div>
   </Container>
 )
