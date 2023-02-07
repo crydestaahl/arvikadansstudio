@@ -27,7 +27,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  top: 10%; /* 25% from the top */
+  top: 7%; /* 25% from the top */
   width: 100%; /* 100% width */
   text-align: center; /* Centered text/links */
   margin: 0 auto; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -152,7 +152,7 @@
   .right {
     width: 40%;
     position: absolute;
-    top: 2.5rem;
+    
     right: -6rem;   
   }
  
