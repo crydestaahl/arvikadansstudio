@@ -11,7 +11,7 @@
   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -146,21 +146,24 @@
   .left {
     font-weight: bold;
     width: 40%;
+    margin: 0;
   }
 
   .right {
     width: 40%;
-    position: relative;
-    top: 10px;
-    right: -255px;
+    position: absolute;
+    top: 2.5rem;
+    right: -6rem;   
   }
+ 
+  .logo {
+    height: var(--size-logo);
+    width: var(--size-logo);
+    display: block;
+    content: 'AD';
+  }
+  
 }
 
-.logo {
-  height: var(--size-logo);
-  width: var(--size-logo);
-  display: block;
-  content: 'AD';
-}
 
 

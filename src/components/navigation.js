@@ -11,11 +11,11 @@ function Navigation() {
    
       <div className={styles.menuBtns}>
         <div className={styles.left}>
-          <Link to="/" >Arvika Dansstudio</Link>
+          <Link to="/" ><h2>Arvika Dansstudio</h2></Link>
         </div>
         <div className={styles.right}>
           <div onClick={() => setOpen(!isOpen)} className={styles.menuBtn}>
-            {isOpen ? 'X' : '☰'} 
+           {isOpen ? 'X' : '☰'} 
           </div>
         </div>
       </div>
