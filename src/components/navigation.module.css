@@ -2,9 +2,7 @@
   display: none;
 }
 
-.left {
-  
-}
+
 
 /* The Overlay (background) */
 .overlay {
@@ -152,7 +150,7 @@
   .right {
     width: 40%;
     position: absolute;
-    
+    top: 2.5rem;
     right: -6rem;   
   }
  

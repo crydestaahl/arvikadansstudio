@@ -16,7 +16,7 @@ function Navigation() {
           <Link to="/" ><h2>Arvika Dansstudio</h2></Link>
         </div>
         <div className={styles.right}>
-          <div onClick={() => setOpen(!isOpen)} className={styles.menuBtn} style={{ fontsize: 'xx-large' }}>
+          <div onClick={() => setOpen(!isOpen)} className={styles.menuBtn} style={{ fontSize: 'xx-large' }}>
            {isOpen ? 'X' : '☰'} 
           </div>
         </div>
