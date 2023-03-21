@@ -20,5 +20,16 @@ module.exports = {
         host: process.env.CONTENTFUL_HOST
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `crydestaahl`,
+        access_token: "IGQVJVYkp3NzJDTmdEREtvM1RsMkhrdFdKTTJKaS1FNm1aSEY0V0RScmt1QTdDMWxSSWNRR1ZApQ29zZAV95SmVmMnFRcHZA1c1BTdmJiczZA3YTJnazc0WlBiZAXpGcU96RGZAvMlFsNG5WREJxRFZASb1hPZAAZDZD",
+
+        paginate: 100,
+        maxPosts: 15,
+        hashtags: false
+      },
+    },
   ],
 };

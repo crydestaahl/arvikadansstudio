@@ -6,6 +6,8 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 import FirstPageContent from '../components/firstPageContent'
+import InstagramFeed from '../components/instagramFeed'
+import FacebookFeed from '../components/facebookFeed'
 
 class RootIndex extends React.Component {
   render() {
@@ -22,6 +24,8 @@ class RootIndex extends React.Component {
         />
         <FirstPageContent content={text} />
         <ArticlePreview posts={posts} />
+        <InstagramFeed />
+        <FacebookFeed />
       </Layout>
     )
   }
