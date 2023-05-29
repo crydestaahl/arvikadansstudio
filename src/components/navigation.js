@@ -4,6 +4,7 @@ import * as styles from './navigation.module.css'
 import { useState } from 'react'
 import instagram from './social-icons/instagram.svg'
 import facebook from './social-icons/facebook.svg'
+import logo from '../components/img/da.jpeg'
 
 function Navigation() {
   const [isOpen, setOpen] = useState(false);
@@ -13,7 +14,7 @@ function Navigation() {
    
       <div className={styles.menuBtns}>
         <div className={styles.left}>
-          <Link to="/" ><h2>Arvika Dansstudio</h2></Link>
+          <Link to="/" ><img src={logo} /></Link>
         </div>
         <div className={styles.right}>
           <div onClick={() => setOpen(!isOpen)} className={styles.menuBtn} style={{ fontSize: 'xx-large' }}>
@@ -74,7 +75,7 @@ function Navigation() {
       )}
 
       <Link to="/" className={`${styles.logoLink}`}>     
-        <span className={styles.navigationItem}>Arvika Dansstudio</span>
+        <span className={styles.navigationItem}><img src={logo} /></span>
       </Link>
       <ul className={`${styles.navigation} ${styles.hide}`}>
         <li className={styles.navigationItem}>
