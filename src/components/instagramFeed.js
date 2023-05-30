@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Component } from "react";
 import Container from './container'
-const accessToken = process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN;
+const accessToken = process.env.INSTAGRAM_USER_TOKEN;
 
 const InstagramFeed = () => {
   const [instagramData, setInstagramData] = useState([]);

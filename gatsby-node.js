@@ -4,14 +4,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const blogPost = path.resolve('./src/templates/blog-post.js')
+  const omOssPost = path.resolve('./src/templates/blog-post.js')
   // Define a template for larare post
   const lararePostPath = path.resolve('./src/templates/larare-post.js')
 
   const result = await graphql(
     `
       {
-        allContentfulBlogPost {
+        allContentfulOmOss {
           nodes {
             title
             slug
@@ -35,7 +35,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allContentfulBlogPost.nodes
+  const posts = result.data.allContentfulOmOss.nodes
 
   const lararePosts = result.data.allContentfulLarare.nodes
 
@@ -50,8 +50,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         index === posts.length - 1 ? null : posts[index + 1].slug
 
       createPage({
-        path: `/blog/${post.slug}/`,
-        component: blogPost,
+        path: `/omoss/${post.slug}/`,
+        component: omOssPost,
         context: {
           slug: post.slug,
           previousPostSlug,

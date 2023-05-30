@@ -9,7 +9,7 @@ import ArticlePreview from '../components/article-preview'
 
 class BlogIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
+    const posts = get(this, 'props.data.allContentfulOmOss.nodes')
     console.log(posts)
     return (
       <Layout location={this.props.location}>
@@ -25,7 +25,7 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulOmOss(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
         slug

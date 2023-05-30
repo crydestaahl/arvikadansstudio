@@ -11,7 +11,7 @@ import FacebookFeed from '../components/facebookFeed'
 
 class RootIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
+    const posts = get(this, 'props.data.allContentfulOmOss.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const text = get(this, 'props.data.contentfulHomePageText.text')
 
@@ -35,7 +35,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulOmOss(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
         slug
