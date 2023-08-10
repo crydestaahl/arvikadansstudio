@@ -5,6 +5,7 @@ import { useState } from 'react'
 import instagram from './social-icons/instagram.svg'
 import facebook from './social-icons/facebook.svg'
 import logo from '../components/img/da.jpeg'
+import { Squash as Hamburger } from 'hamburger-react'
 
 function Navigation() {
   const [isOpen, setOpen] = useState(false);
@@ -17,9 +18,7 @@ function Navigation() {
           <Link to="/" ><img src={logo} /></Link>
         </div>
         <div className={styles.right}>
-          <div onClick={() => setOpen(!isOpen)} className={styles.menuBtn} style={{ fontSize: 'xx-large' }}>
-           {isOpen ? 'X' : '☰'} 
-          </div>
+          <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
 
