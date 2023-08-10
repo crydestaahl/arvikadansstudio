@@ -27,7 +27,7 @@ const InstagramFeed = () => {
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           {instagramData.map((post) => (
               <div key={post.id} style={{ maxWidth: '215px', margin: '2rem' }}>
-                  <a href="https://www.instagram.com/crydestaahl" target="_blank">
+                  <a href="https://www.instagram.com/dansstudionarvika/" target="_blank">
                       <div style={{ maxWidth: '215px' }}>
                           <img src={post.media_url} alt={post.caption} style={{ width: '175px', hight: '175px' }}/>
                           <p style={{ maxWidth: '175px' }}>{post.caption}</p>

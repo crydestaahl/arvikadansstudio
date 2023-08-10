@@ -24,8 +24,8 @@ class RootIndex extends React.Component {
         />
         <FirstPageContent content={text} />
         <ArticlePreview posts={posts} />
-        <InstagramFeed />
-        <FacebookFeed />
+        {/*<InstagramFeed />
+        <FacebookFeed >*/}
       </Layout>
     )
   }

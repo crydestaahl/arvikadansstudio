@@ -139,6 +139,10 @@ code {
   left: 0px;
 }
 
+.titles:hover {
+  border-bottom: #333;
+}
+
 @media (min-width: 768px) {
   .button-52 {
     padding: 13px 50px 13px;

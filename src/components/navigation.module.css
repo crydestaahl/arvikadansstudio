@@ -18,6 +18,19 @@
   color: #333;
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 2s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  animation: showOverlay .6s ease-in-out forwards;
+}
+
+@keyframes showOverlay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Position the content inside the overlay */
@@ -99,7 +112,7 @@
 
 .navigationItem a {
   border-bottom: 1.5px solid transparent;
-  color: currentColor;
+  color: #333;
   text-decoration: none;
 }
 
@@ -150,7 +163,7 @@
   .right {
     width: 40%;
     position: absolute;
-    top: 1rem;
+    top: .7rem;
     right: -6rem;   
   }
  
