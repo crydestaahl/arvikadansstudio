@@ -5,6 +5,7 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 import Container from './container'
 import * as styles from './article-preview.module.css'
+import Fade from 'react-reveal/Fade';
 
 const ArticlePreview = ({ posts }) => {
   if (!posts) return null
@@ -12,21 +13,23 @@ const ArticlePreview = ({ posts }) => {
 
   return (
     <Container>
-      <ul className={styles.articleList}>
-        {posts.map((post) => {
-          return (
-            <li key={post.slug}>
-              <Link to={`/omoss/${post.slug}`} className={styles.link}>
-                <GatsbyImage alt="" image={post.heroImage.gatsbyImage} />
-                <h2 className={`${styles.title} titles`}>{post.title}</h2>
-              </Link>
-              <div>
-                {post.description?.raw && renderRichText(post.description)}
-              </div>            
-            </li>
-          )
-        })}
-      </ul>
+        <ul className={styles.articleList}>
+          {posts.map((post) => {
+            return (
+              <li key={post.slug}>
+                <Link to={`/omoss/${post.slug}`} className={styles.link}>
+                  <GatsbyImage alt="" image={post.heroImage.gatsbyImage} />
+                  <Fade left>
+                    <h2 className={`${styles.title} titles`}>{post.title}</h2>
+                  </Fade>
+                </Link>
+                <div>
+                  {post.description?.raw && renderRichText(post.description)}
+                </div>            
+              </li>
+            )
+          })}
+        </ul>
     </Container>
   )
 }

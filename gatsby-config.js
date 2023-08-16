@@ -23,9 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `crydestaahl`,
-        access_token: "IGQVJVYkp3NzJDTmdEREtvM1RsMkhrdFdKTTJKaS1FNm1aSEY0V0RScmt1QTdDMWxSSWNRR1ZApQ29zZAV95SmVmMnFRcHZA1c1BTdmJiczZA3YTJnazc0WlBiZAXpGcU96RGZAvMlFsNG5WREJxRFZASb1hPZAAZDZD",
-
+        username: `7031238836`,
+        access_token: "IGQVJYcldHdi1OSGVCSC1UNkE2Rm02SDJsaFQ5VFoxYjIzRXB4TDhnMXlyblBSckk4RFh0Tm8wdWZAZAVFZALQnEyeWxNNHZACX3JrN3JWdGZAZANFgtaDhMR3poQ2FtbVFTcGtGbjR0V3ZAPR0FQalFOZAFhVMQZDZD",
         paginate: 100,
         maxPosts: 15,
         hashtags: false

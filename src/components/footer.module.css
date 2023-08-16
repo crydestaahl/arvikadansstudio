@@ -1,9 +1,43 @@
 .container {
-  border-top: 1px solid var(--border);
+  border-top: 3px solid var(--border);
   font-size: var(--text-sm);
   margin-top: var(--space-2xl);
   padding: var(--space-2xl) 0;
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexContainer {
+  /* Add any other necessary styles for your flex container */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left {
+  flex: 1;
+  margin-bottom: 2em;
+}
+
+.right {
+  margin: 1rem auto;
+}
+.socialLogos {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.instagram {
+  width: 2rem;
+  height: 2rem;
+}
+
+.facebook {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
 }
 
 .container a {
@@ -14,4 +48,23 @@
 .container a:hover {
   border-bottom-color: var(--primary);
   color: var(--primary);
+}
+
+@media (max-width: 400px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .socialLogos {
+  }
+
+  a img .facebook {
+   height: 2em;
+   width: 2em;
+  }
+
+  a img .instagram {
+    height: 2em !important;
+    width: 2em !important;
+  }
 }

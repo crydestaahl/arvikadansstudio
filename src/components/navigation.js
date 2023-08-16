@@ -26,6 +26,9 @@ function Navigation() {
       <nav className={styles.overlay}  onClick={() => setOpen(!isOpen)}>
         
         <ul className={styles.overlayContent}>
+        <div className={styles.closeBtn}>
+          +
+        </div>
           <li >
             <Link to="/"  onClick={() => setOpen(!isOpen)}>
               Hem

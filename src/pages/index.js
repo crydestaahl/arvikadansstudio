@@ -8,6 +8,7 @@ import ArticlePreview from '../components/article-preview'
 import FirstPageContent from '../components/firstPageContent'
 import InstagramFeed from '../components/instagramFeed'
 import FacebookFeed from '../components/facebookFeed'
+import Fade from 'react-reveal/Fade';
 
 class RootIndex extends React.Component {
   render() {
@@ -17,15 +18,17 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Hero
-          image={author.heroImage.gatsbyImage}
-          title={author.name}
-          content={author.shortBio}
-        />
+        <Fade>
+          <Hero
+            image={author.heroImage.gatsbyImage}
+            title={author.name}
+            content={author.shortBio}
+          />
+        </Fade>
         <FirstPageContent content={text} />
         <ArticlePreview posts={posts} />
-        {/*<InstagramFeed />
-        <FacebookFeed >*/}
+        <InstagramFeed />
+        {/*<FacebookFeed >*/}
       </Layout>
     )
   }
