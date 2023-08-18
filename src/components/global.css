@@ -20,8 +20,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  scroll-behavior: smooth; 
 }
 
 html * {
@@ -38,6 +37,7 @@ body {
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img {
@@ -153,6 +153,7 @@ code {
   margin-bottom: 2rem;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .socialFeedTitle {
@@ -162,7 +163,7 @@ code {
 }
 
 .socialItem {
-  margin-right: 1rem;
+  margin: 0.5rem;
 }
 
 .socialImg {
