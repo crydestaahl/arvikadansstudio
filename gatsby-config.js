@@ -24,10 +24,21 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `7031238836`,
-        access_token: "IGQVJYcldHdi1OSGVCSC1UNkE2Rm02SDJsaFQ5VFoxYjIzRXB4TDhnMXlyblBSckk4RFh0Tm8wdWZAZAVFZALQnEyeWxNNHZACX3JrN3JWdGZAZANFgtaDhMR3poQ2FtbVFTcGtGbjR0V3ZAPR0FQalFOZAFhVMQZDZD",
+        access_token: process.env.REACT_APP_INSTAGRAM_USER_TOKEN, 
         paginate: 100,
         maxPosts: 15,
         hashtags: false
+      },
+    },
+    {
+      resolve: `gatsby-source-facebook`,
+      options: {
+        places: [`${facebookPageID}`], // Can be either a numeric ID or the URL ID
+        params: {
+          fields: 'hours, posts { message, created_time }', // See Facebooks API to see what you can query for
+        },
+        key: process.env.FACEBOOK_GRAPH_TOKEN, // You will need to create a Facebook application and go through review in order to get an API token.
+        version: '5.0', // The version of the graph API to use. Defaults to 5.0
       },
     },
   ],
