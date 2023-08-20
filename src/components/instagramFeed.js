@@ -4,7 +4,6 @@ import Img from "gatsby-image";
 
 import Container from './container'
 
-
 const InstagramFeed = () => {
   const data = useStaticQuery(graphql`
     query {
