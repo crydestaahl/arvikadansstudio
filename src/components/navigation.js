@@ -4,7 +4,7 @@ import * as styles from './navigation.module.css'
 import { useState } from 'react'
 import instagram from './social-icons/instagram.svg'
 import facebook from './social-icons/facebook.svg'
-import logo from '../components/img/da.jpeg'
+import logo from '../components/img/da.png'
 import { Squash as Hamburger } from 'hamburger-react'
 
 function Navigation() {
@@ -15,7 +15,7 @@ function Navigation() {
    
       <div className={styles.menuBtns}>
         <div className={styles.left}>
-          <Link to="/" ><img src={logo} /></Link>
+          <Link to="/"><img src={logo} className={styles.logoImg}/></Link>
         </div>
         <div className={styles.right}>
           <Hamburger toggled={isOpen} toggle={setOpen} />

@@ -2,7 +2,9 @@
   display: none;
 }
 
-
+.logoImg {
+  width: 70%;
+}
 
 /* The Overlay (background) */
 .overlay {
@@ -70,29 +72,6 @@
   rotate: 45deg;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  
-  .menuBtns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-
-  .overlay {
-    display: flex;
-  }
-
-  .active {
-    display: flex;
-  }
-  .notActive {
-    display: none !important;
-  }
-}
-
-
 /* Ordernay Nav styler  */
 
 .container {
@@ -137,11 +116,14 @@
   gap: var(--space-md);
 }
 
-
-
 @media (max-width: 767px) {
   .hide {
     display: none;
+  }
+
+  .logoImg {
+    height: 47px;
+    width: 47px;
   }
 
   .logoLink > span:last-child {
@@ -163,15 +145,15 @@
 
   .left {
     font-weight: bold;
-    width: 40%;
+    width: 100%;
     margin: 0;
   }
 
   .right {
     width: 40%;
     position: absolute;
-    top: .7rem;
-    right: -6rem;   
+    top: 1.3rem;
+    right: -5rem;   
   }
  
   .logo {
@@ -183,5 +165,26 @@
   
 }
 
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  
+  .menuBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  .overlay {
+    display: flex;
+  }
+
+  .active {
+    display: flex;
+  }
+  .notActive {
+    display: none !important;
+  }
+}
 
 
