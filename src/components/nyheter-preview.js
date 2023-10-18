@@ -20,7 +20,7 @@ const NyheterPreview = ({ posts }) => {
                 <Link to={`/nyheter/${post.slug}`} className={styles.link}>
                   <GatsbyImage alt="" image={post.heroImage.gatsbyImage} />
                   <Fade left>
-                    <h2 className={`${styles.title} titles`}>{post.title}</h2>
+                    <h2 className={`${post.title} titles`}>{post.title}</h2>
                   </Fade>
                 </Link>
                 <div>

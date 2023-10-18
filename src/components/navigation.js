@@ -30,8 +30,13 @@ function Navigation() {
           +
         </div>
           <li >
-            <Link to="/"  onClick={() => setOpen(!isOpen)}>
-              Hem
+            <Link to="/nyheter/"  onClick={() => setOpen(!isOpen)}>
+              Nyheter
+            </Link>
+          </li>
+          <li >
+            <Link to="/omoss/Danskurser%20&%20Schema/"  onClick={() => setOpen(!isOpen)}>
+              Danskurser & Schema
             </Link>
           </li>
           <li >
@@ -83,6 +88,16 @@ function Navigation() {
         <li className={styles.navigationItem}>
           <Link to="/" activeClassName="active">
             Hem
+          </Link>
+        </li>
+        <li className={styles.navigationItem}>
+        <Link to="/Nyheter/" activeClassName="active">
+          Nyheter
+        </Link>
+        </li>
+        <li className={styles.navigationItem}>
+          <Link to="/omoss/Danskurser%20&%20Schema/" activeClassName="active">
+            Danskurser & schema
           </Link>
         </li>
         <li className={styles.navigationItem}>
