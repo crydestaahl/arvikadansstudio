@@ -13,6 +13,7 @@ import Fade from 'react-reveal/Fade';
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulOmOss.nodes')
+    const news = get(this, 'props.data.allContentfulNyheter.nodes')
     const [author] = get(this, 'props.data.allContentfulIndex.nodes')
     const text = get(this, 'props.data.contentfulHomePageText.text')
 
@@ -27,7 +28,7 @@ class RootIndex extends React.Component {
         </Fade>
         <FirstPageContent content={text} />
         <NyheterPreview posts={posts} />
-        <ArticlePreview posts={posts} />
+        <ArticlePreview posts={news} />
         <InstagramFeed />
       </Layout>
     )
