@@ -27,6 +27,7 @@ class RootIndex extends React.Component {
           />
         </Fade>
         <FirstPageContent content={text} />
+        Nyheter
         <NyheterPreview posts={posts} />
         <ArticlePreview posts={news} />
         <InstagramFeed />
