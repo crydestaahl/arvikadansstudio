@@ -91,7 +91,7 @@ function Navigation() {
           </Link>
         </li>
         <li className={styles.navigationItem}>
-        <Link to="/Nyheter/" activeClassName="active">
+        <Link to="/nyheter/" activeClassName="active">
           Nyheter
         </Link>
         </li>

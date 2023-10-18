@@ -8,6 +8,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for larare post
   const lararePostPath = path.resolve('./src/templates/larare-post.js')
 
+  const nyheterPostPath = path.resolve('./src/templates/nyheter-post.js')
+
   const result = await graphql(
     `
       {
@@ -18,6 +20,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
         allContentfulLarare {
+          nodes {
+            title
+            slug
+          }
+        }
+        allContentfulNyheter {
           nodes {
             title
             slug
@@ -38,6 +46,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = result.data.allContentfulOmOss.nodes
 
   const lararePosts = result.data.allContentfulLarare.nodes
+  
+  const nyheterPosts = result.data.allContentfulNyheter.nodes
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
@@ -74,6 +84,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       createPage({
         path: `/varalarare/${post.slug}/`,
         component: lararePostPath,
+        context: {
+          slug: post.slug,
+          previousPostSlug,
+          nextPostSlug,
+        },
+      })
+    })
+  }
+
+  if (nyheterPosts.length > 0) {
+    nyheterPosts.forEach((post, index) => {
+      const previousPostSlug = index === 0 ? null : nyheterPosts[index - 1].slug
+      const nextPostSlug =
+        index === nyheterPosts.length - 1 ? null : nyheterPosts[index + 1].slug
+
+      createPage({
+        path: `/nyheter/${post.slug}/`,
+        component: nyheterPostPath,
         context: {
           slug: post.slug,
           previousPostSlug,

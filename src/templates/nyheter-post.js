@@ -36,7 +36,7 @@ class NyheterPostTemplate extends React.Component {
         },
       },
     };
-
+    
     return (
       <Layout location={this.props.location}>
         <Seo

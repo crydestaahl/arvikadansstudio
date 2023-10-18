@@ -9,13 +9,13 @@ import NyheterPreview from '../components/nyheter-preview'
 
 class NyheterIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulNyheter.nodes')
-    console.log(posts)
+    const news = get(this, 'props.data.allContentfulNyheter.nodes')
+    console.log(news)
     return (
       <Layout location={this.props.location}>
         <Seo title="Nyheter" />
         <Hero title="Nyheter" />
-        <NyheterPreview posts={posts} />
+        <NyheterPreview posts={news} />
       </Layout>
     )
   }
