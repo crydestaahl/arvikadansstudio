@@ -92,9 +92,6 @@ export const pageQuery = graphql`
     contentfulNyheter(slug: { eq: $slug }) {
       slug
       title
-      author {
-        name
-      }
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
       heroImage {
