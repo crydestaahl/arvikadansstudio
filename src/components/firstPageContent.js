@@ -9,7 +9,7 @@ const FirstPageContent = ({ content }) => (
       {content && (
         <body className={styles.content}>{renderRichText(content)}</body>
       )}
-      <a href="https://www.sv.se/sokresultat/?startindex=0&range=30&autoCompleteRange=100&distan[…]&phrase=dansstudion+arvika+&department=0&formIndex=0&scrollTop=0" rel="noopener"><button className="button-52" role="button">Boka en kurs!</button></a>
+      <a href="https://www.sv.se/avdelningar/sv-varmland/kontor-start/arvika/dansstudion-i-arvika/" rel="noopener"><button className="button-52" role="button">Boka en kurs!</button></a>
     </div>
   </Container>
 )
